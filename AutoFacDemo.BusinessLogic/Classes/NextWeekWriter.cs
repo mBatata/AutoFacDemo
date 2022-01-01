@@ -3,12 +3,12 @@ using System;
 
 namespace AutoFacDemo.BusinessLogic.Classes
 {
-    public class TodayWriter : IDateWriter
+    public class NextWeekWriter : IDateWriter
     {
         private IOutput _output;
         private ILogger _logger;
 
-        public TodayWriter(IOutput output, ILogger logger)
+        public NextWeekWriter(IOutput output, ILogger logger)
         {
             _output = output;
             _logger = logger;
@@ -16,9 +16,9 @@ namespace AutoFacDemo.BusinessLogic.Classes
 
         public void WriteDate()
         {
-            _logger.Log($"{nameof(TodayWriter)} START");
-            _output.Write(DateTime.Today.ToShortDateString());
-            _logger.Log($"{nameof(TodayWriter)} END");
+            _logger.Log($"{nameof(NextWeekWriter)} START");
+            _output.Write(DateTime.Today.AddDays(7).ToShortDateString());
+            _logger.Log($"{nameof(NextWeekWriter)} END");
         }
     }
 }

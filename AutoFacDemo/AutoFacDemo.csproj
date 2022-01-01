@@ -7,10 +7,18 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AutoFacDemo.BusinessLogic\AutoFacDemo.BusinessLogic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="autofac.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

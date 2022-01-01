@@ -43,6 +43,11 @@
   <ItemGroup>
     <Compile Include="Classes\ConsoleLogger.cs" />
     <Compile Include="Classes\ConsoleOutput.cs" />
+    <Compile Include="Classes\NextMonthWriter.cs" />
+    <Compile Include="Classes\NextWeekWriter.cs" />
+    <Compile Include="Classes\NextYearWriter.cs" />
+    <Compile Include="Classes\TomorrowWriter.cs" />
+    <Compile Include="Enums\DateWriterType.cs" />
     <Compile Include="Interfaces\ILogger.cs" />
     <Compile Include="Classes\TodayWriter.cs" />
     <Compile Include="Interfaces\IDateWriter.cs" />

@@ -1,0 +1,10 @@
+{
+  "modules": [
+    {
+      "type": "AutoFacDemo.DateWriterModule, AutoFacDemo",
+      "properties": {
+        "DateWriterType": "NextWeek"
+      }
+    }
+  ]
+}
