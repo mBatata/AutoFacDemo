@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ConsoleOutput.cs" />
+    <Compile Include="Classes\TodayWriter.cs" />
+    <Compile Include="Interfaces\IDateWriter.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
