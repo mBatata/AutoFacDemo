@@ -12,6 +12,7 @@ namespace AutoFacDemo
 
             containerBuilder.RegisterType<ConsoleOutput>().As<IOutput>();
             containerBuilder.RegisterType<TodayWriter>().As<IDateWriter>();
+            containerBuilder.RegisterType<ConsoleLogger>().As<ILogger>();
 
             return containerBuilder.Build();
         }
