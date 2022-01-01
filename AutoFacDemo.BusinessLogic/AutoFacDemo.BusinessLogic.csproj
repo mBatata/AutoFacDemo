@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ConsoleLogger.cs" />
     <Compile Include="Classes\ConsoleOutput.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
     <Compile Include="Classes\TodayWriter.cs" />
     <Compile Include="Interfaces\IDateWriter.cs" />
     <Compile Include="Interfaces\IOutput.cs" />
