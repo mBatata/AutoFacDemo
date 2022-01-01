@@ -3,7 +3,7 @@
     {
       "type": "AutoFacDemo.DateWriterModule, AutoFacDemo",
       "properties": {
-        "DateWriterType": "NextWeek"
+        "DateWriterType": "Today"
       }
     }
   ]
