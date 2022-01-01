@@ -8,15 +8,22 @@ namespace AutoFacDemo
     {
         static void Main(string[] args)
         {
-            var container = ContainerConfig.Configure();
-
-            using (var scope = container.BeginLifetimeScope())
+            try
             {
-                var writer = scope.Resolve<IDateWriter>();
-                writer.WriteDate();
-            }
+                var container = ContainerConfig.Configure();
 
-            Console.Read();
+                using (var scope = container.BeginLifetimeScope())
+                {
+                    var writer = scope.Resolve<IDateWriter>();
+                    writer.WriteDate();
+                }
+
+                Console.Read();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
     }
 }
