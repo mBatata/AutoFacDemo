@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Autofac;
+using AutoFacDemo.BusinessLogic.Interfaces;
+using System;
 
 namespace AutoFacDemo
 {
@@ -6,7 +8,15 @@ namespace AutoFacDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var container = ContainerConfig.Configure();
+
+            using (var scope = container.BeginLifetimeScope())
+            {
+                var writer = scope.Resolve<IDateWriter>();
+                writer.WriteDate();
+            }
+
+            Console.Read();
         }
     }
 }
